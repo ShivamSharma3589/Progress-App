@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Roboto&family=Sofia&display=swap');
+:root{
+    --shadow1: rgba(191, 0, 255, 0.628);
+    --shadow2: rgba(255, 0, 170, 0.669);
+    --shadow3: rgba(255, 0, 0, 0.524);
+    --progress: rgb(255, 255, 255);
+    --scale: rgb(219, 0, 175);
+    --body: black;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    user-select: none;
+    font-family: 'Baloo Bhaijaan 2', 'Roboto', cursive;
+}
+body{
+    background-color: var(--body);
+    color: purple;
+}
+h1{
+    text-align: center;
+    margin: .5rem .7rem 0;
+    padding: .5rem 0;
+    font-family: 'Sofia', cursive;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 1px 2px var(--shadow1), 1px 0px 4px var(--shadow2), 0px 1px 6px var(--shadow3);
+}
+.underline{
+    height: 5px ;
+    width: 90%;
+    margin: auto;
+    border-radius: 4px;
+    box-shadow: 0px .5px 5px var(--shadow1), 0px 0.5px 7px var(--shadow2), 0px .5px 9px var(--shadow3);
+    margin: 0 auto 2rem;
+}
+#progess-container{
+    width: 96%;
+    margin: .9rem auto;
+    border-radius: 10px;
+    padding: .7rem;
+    box-shadow: 0px 1px 10px var(--shadow2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#progress{
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--progress);
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px var(--shadow1),  0px 0px 7px var(--shadow2),  0px 0px 9px var(--shadow3);
+}
+#cover{
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--body);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 10px var(--shadow1), inset 0px 0px 7px var(--shadow2), inset 0px 0px 9px var(--shadow3);
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+.circle{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    transform-origin: center right;
+    transition: transform 1s ease-in-out;
+}
+.circle:nth-child(2){
+    background-color: var(--scale);
+}
+.circle:nth-child(3){
+    background-color: var(--scale);
+}
+.circle:nth-child(4){
+    background-color: var(--progress);
+    transition: opacity 1s ease-in-out;
+}
+#checklist-container{
+    width: 96%;
+    margin: .3rem auto;
+    border-radius: 10px;
+    padding: .7rem;
+    box-shadow: 0px 1px 10px var(--shadow2);
+}
+#sub-heading > .underline{
+    width: 100%;
+}
+#checklist-container label{
+    font-size: 1rem;
+}
+#checklist-container input:checked + label{
+    text-decoration: line-through;
+}
