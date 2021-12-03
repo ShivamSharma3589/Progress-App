@@ -7,31 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <title>My Progress</title>
+    <title>My Progress WebApp</title>
 </head>
 
 <body>
+
+    <!-- header section -->
     <header>
         <h1>My Progess Bar</h1>
         <div class="underline"></div>
     </header>
+
+    <!-- Rounded progress bar and details section  -->
     <section id="progess-container">
+
+        <!-- Rounded progress bar -->
         <div id="progress">
             <div id="cover">0%</div>
             <div class="circle"></div>
             <div class="circle"></div>
             <div class="circle"></div>
         </div>
+
+        <!-- details or status -->
         <div id="details">
             <div>Completed:&nbsp; <span id="completed">0</span></div>
             <div>Tasks: <span id="total">0</span></div>
         </div>
     </section>
+
+    <!-- main checklist section  -->
     <section id="checklist-container">
+
+        <!-- sub heading  -->
         <div id="sub-heading">
             <h1 id="status">In Progress . . .</h1>
             <div class="underline"></div>
         </div>
+
+        <!-- Checklist items section  -->
         <div id="frontend">
             <div>
                 <input type="checkbox" name="html" id="html">
@@ -65,5 +79,4 @@
     </section>
 </body>
 <script src="main.js"></script>
-
 </html>
