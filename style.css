@@ -17,7 +17,7 @@
 }
 body{
     background-color: var(--body);
-    color: purple;
+    color: rgb(255, 0, 255);
 }
 h1{
     text-align: center;
@@ -42,8 +42,11 @@ h1{
     padding: .7rem;
     box-shadow: 0px 1px 10px var(--shadow2);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: .5rem;
+    background-color: var(--body);
 }
 #progress{
     width: 6rem;
@@ -88,6 +91,14 @@ h1{
     background-color: var(--progress);
     transition: opacity 1s ease-in-out;
 }
+#details{
+    font-size: 1.4rem;
+}
+#details > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 #checklist-container{
     width: 96%;
     margin: .3rem auto;
@@ -99,8 +110,17 @@ h1{
     width: 100%;
 }
 #checklist-container label{
-    font-size: 1rem;
+    font-size: 1.5rem;
+    padding: 0 .3rem;
+}
+#frontend > div{
+    display: flex;
+    align-items: center;
+}
+#frontend > div > label{
+    width: 100%;
 }
 #checklist-container input:checked + label{
     text-decoration: line-through;
+    opacity: .5;
 }
